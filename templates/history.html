@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/style.css') }}"
+    />
+    <title>Smile Classifier - History</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 20px; /* Increase padding to make rows taller */
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .back-btn, .classify-btn {
+        display: inline-block;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px; /* Font size */
+        font-weight: bold;
+        text-decoration: none;
+        color: #007bff;
+        padding: 10px 16px; /* Increased height and slightly smaller width */
+        width: auto; /* Let width adjust based on content */
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .back-btn:hover, .classify-btn:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+    
+      
+    </style>
+  </head>
+  <body>
+    <h1>Classification History</h1>
+    <table>
+      <tr>
+        <th>Image Path</th>
+        <th>Classification</th>
+        <th>Date-Time</th>
+      </tr>
+
+      {% if history %}
+        {% for row in history %}
+        <tr>
+          <td><a href="{{ row.image }}" target="_blank"><img src='{{ row.image }}' alt='Images' height='100px'>  </a></td>
+          <td>{{ row.classification }}</td>
+          <td>{{ row.date_time }}</td>
+        </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td colspan="3">No classification history available.</td>
+        </tr>
+      {% endif %}
+    </table>
+    
+    <a href="{{ url_for('home') }}" class="back-btn">Back To Home Page</a>
+    <a href="{{ url_for('classify') }}" class="classify-btn">Classify an Image</a>
+  </body>
+</html>
+

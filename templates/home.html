@@ -1,0 +1,59 @@
+{% extends "navbar.html" %}
+
+{% block title %}Home - Image Classifier{% endblock %}
+
+{% block content %}
+<div class="hero-section" style="padding: 40px 80px; text-align: center;">
+    <div class="hero-text">
+        <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Welcome to the Image Classifier</h1>
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 30px;">
+            Discover the power of AI with our advanced image classification tool. 
+            Effortlessly detect emotions such as <strong>smiling</strong> or <strong>not smiling</strong> with remarkable accuracy.
+        </p>
+        <div class="hero-buttons">
+            <a href="/classify" class="btn btn-primary" style="margin-right: 10px;">Classify an Image</a>
+            <a href="/history" class="btn btn-secondary">View History</a>
+        </div>
+    </div>
+</div>
+
+<section class="features-section" style="padding: 40px 80px;">
+    <h2 class="section-title" style="text-align: center; font-size: 2rem; margin-bottom: 30px;">Why Choose Us?</h2>
+    <div class="features" style="display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap;">
+        <div class="feature-item" style="flex: 1; max-width: 300px; text-align: center;">
+            <i class="bx bx-brain" style="font-size: 3rem; color: #007bff; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Smile & Non-Smile Classifier</h3>
+            <p>
+                Our cutting-edge smile detection system uses a Voting Classifier model, combining the power of 
+                <strong>SVM</strong>, <strong>Random Forest</strong>, and <strong>Decision Tree</strong> to provide accurate results.
+            </p>
+        </div>
+        <div class="feature-item" style="flex: 1; max-width: 300px; text-align: center;">
+            <i class="bx bx-time" style="font-size: 3rem; color: #007bff; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Real-Time Results</h3>
+            <p>
+                Experience fast, real-time results thanks to our optimized classification system.
+            </p>
+        </div>
+        <div class="feature-item" style="flex: 1; max-width: 300px; text-align: center;">
+            <i class="bx bx-history" style="font-size: 3rem; color: #007bff; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Track Your History</h3>
+            <p>
+                Easily access and manage your past classifications with our convenient history feature.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section" style="padding: 40px 80px; text-align: center; background-color: #f8f9fa;">
+    <h2 style="font-size: 2rem; margin-bottom: 20px;">Ready to Classify?</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 20px;">Start classifying images today and see the power of AI in action!</p>
+    <a href="/classify" class="btn btn-primary">Get Started</a>
+</section>
+
+<footer class="footer" style="padding: 20px 80px; text-align: center; background-color: #343a40; color: #fff;">
+    <div class="footer-content">
+        <p>&copy; 2025 Image Classifier. All rights reserved.</p>
+    </div>
+</footer>
+{% endblock %}
