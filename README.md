@@ -96,6 +96,7 @@ The backend is implemented using FastAPI, with MySQL as the database for storing
 2. Add user authentication for personalized history.
 3. Improve model performance using advanced deep learning techniques.
 
+---
+
 ## License
 This project is licensed under the MIT License.
-
