@@ -1,7 +1,6 @@
 from sklearn.ensemble import VotingClassifier, RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
-
 import os
 import pickle
 import numpy as np
