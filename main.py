@@ -14,7 +14,6 @@ from src.inference import classify_image
 
 app = FastAPI()
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
