@@ -22,6 +22,7 @@ services:
       DATABASE_PASSWORD: root
     command: ["wait-for-it", "db:3306", "--", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
 
+
   db:
     image: mysql:8.0.20
     container_name: mysql_container
