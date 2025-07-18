@@ -9,7 +9,6 @@ from sklearn.ensemble import RandomForestClassifier, VotingClassifier
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.preprocessing import StandardScaler
 
-
 data_dir = r"D:\smile\data"
 img_size = (64, 64)
 classes = {"non_smile": 0, "smile": 1}
