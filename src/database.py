@@ -58,6 +58,5 @@ def get_history():
         for row in records
     ]
 
-
 if __name__ == "__main__":
     init_db()
